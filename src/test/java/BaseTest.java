@@ -7,5 +7,6 @@ public class BaseTest {
 
         ConfigManager.printAllProperties();
 
+
     }
 }

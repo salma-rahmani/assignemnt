@@ -44,6 +44,11 @@ static {
         }
     }
 
+
+    public static String getProperty(String key) {
+        return properties.getProperty(key);
+    }
+
     public static void printAllProperties() {
         logger.info("Listing all configuration properties:");
         for (Map.Entry<Object, Object> entry : properties.entrySet()) {
