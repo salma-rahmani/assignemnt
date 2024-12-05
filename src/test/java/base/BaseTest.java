@@ -2,6 +2,8 @@ package base;
 
 import config.ConfigManager;
 import config.DriverFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -9,7 +11,8 @@ import org.testng.annotations.BeforeMethod;
 public class BaseTest {
 
     public WebDriver driver;
-    public static final String baseUrl = ConfigManager.getProperty("baseUrl");
+    private static final String baseUrl = ConfigManager.getProperty("baseUrl");
+    public Logger logger = LogManager.getLogger(this);
 
 
     @BeforeMethod
@@ -18,6 +21,7 @@ public class BaseTest {
         driver.get(baseUrl);
 
         System.out.println("The URL " + baseUrl);
+        logger.info("The URL" + baseUrl);
 
 
     }
@@ -27,6 +31,7 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
             System.out.println("The browser is quit");
+            logger.info("The browser is quit");
 
 
         }
