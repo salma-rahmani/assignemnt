@@ -15,12 +15,9 @@ public class ConfigManager {
     public static final Properties properties = new Properties();
     public static final Logger logger = LogManager.getLogger(ConfigManager.class);
 
-    public static void main(String[] args) {
-
-
-        loadProperties();
-        printAllProperties();
-    }
+static {
+    loadProperties();
+}
 
     public static void loadProperties() {
 
