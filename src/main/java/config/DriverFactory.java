@@ -16,6 +16,7 @@ public class DriverFactory {
     // WebDriver instance used across the test execution
     public static WebDriver driver;
 
+
     /**
      * Initializes and returns a WebDriver instance based on the configured browser.
      * The browser configuration is retrieved from the ConfigManager.
