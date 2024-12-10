@@ -30,6 +30,16 @@ public class NavigateToGoogleStorePageStep extends BaseTest {
         Thread.sleep(2000);
     }
 
+    @When("I click on earbuds page")
+    public void i_click_on_earbuds_page(){
+        googleLandingPage.clickOnEarbudsButton();
+    }
+
+    @Then("I should see the earbuds page")
+    public void i_should_see_earbuds_page() throws InterruptedException {
+        Thread.sleep(2000);
+    }
+
     @After
     public void tearDown() {
         super.tearDown();

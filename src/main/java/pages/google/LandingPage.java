@@ -9,16 +9,27 @@ public class LandingPage {
     WebElement aboutElement;
     WebElement storeElement;
     WebElement gmailElement;
+    WebElement commitmentElement;
+    WebElement earbudsElement;
+
 
     public LandingPage(WebDriver driver) {
         this.driver = driver;
         this.aboutElement = driver.findElement(By.xpath("//a [text() = 'About']"));
         this.storeElement = driver.findElement(By.xpath("//a [text() = 'Store']"));
         this.gmailElement = driver.findElement(By.xpath("//a [text() = 'Gmail']"));
+        this.commitmentElement = driver.findElement(By.xpath("//a[@data-g-action = 'commitments']"));
+        this.earbudsElement = driver.findElement(By.xpath("//a[text() = 'Earbuds']"));
+
     }
 
     public void clickOnAboutButton() {
         aboutElement.click();
+
+    }
+    public void clickOnCommitButton(){
+        commitmentElement.click();
+        String text = commitmentElement.getText();
 
     }
 
@@ -26,10 +37,15 @@ public class LandingPage {
         storeElement.click();
 
     }
+    public void clickOnEarbudsButton(){
+        earbudsElement.click();
+        String text = earbudsElement.getText();
+    }
 
     public void clickOnGmailButton() {
         gmailElement.click();
     }
+
 
 
 }

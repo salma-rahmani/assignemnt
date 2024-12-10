@@ -31,6 +31,15 @@ public class NavigateToGoogleAboutPageStep extends BaseTest {
     public void i_should_see_the_about_page() throws InterruptedException {
         Thread.sleep(2000);
     }
+    @When("I click on commitment button")
+    public void i_click_on_commitment_button(){
+        googleLandingPage.clickOnCommitButton();
+    }
+
+    @Then("I should see the commitment page")
+    public void i_should_see_the_commitment_page() throws InterruptedException {
+        Thread.sleep(2000);
+    }
 
     @After
     public void tearDown() {
